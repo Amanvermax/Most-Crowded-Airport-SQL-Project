@@ -48,14 +48,14 @@ This project includes a collection of Analysis to extract useful information fro
 4. Retrieve the airport with the highest number of passengers for each year.
 5. The top 5 airports
  with the highest percentage of passengers above 50 in 2020.
-6.Countries with the Most Passengers in 2018 Here I am finding the countries with the most passengers in 2018.
+6. Countries with the Most Passengers in 2018 Here I am finding the countries with the most passengers in 2018.
 7. find out how many total passengers traveled in economy_class and business_class in 2020, we can use the following SQL query
-8.Finding the top 5 countries with the most airports.
-9.Query to categorize airports by country into regions.
-10.Find pairs of airports in the same country by joining the "airport" table with itself (a1 and a2). Match rows where a1 and a2 have 
+8. Finding the top 5 countries with the most airports.
+9. Query to categorize airports by country into regions.
+10. Find pairs of airports in the same country by joining the "airport" table with itself (a1 and a2). Match rows where a1 and a2 have 
 the same country and ensure that a1's airport is less than a2's airport to avoid duplicates or self-pairs.
-11.Identifies the year(s) with the highest number of business class passengers, matching the maximum count among all years in the provided data.
-12.Finding the lists airports with above-average male passengers, ranked by descending male passenger count,
+11. Identifies the year(s) with the highest number of business class passengers, matching the maximum count among all years in the provided data.
+12. Finding the lists airports with above-average male passengers, ranked by descending male passenger count,
  identifying airports with a higher concentration of male passengers than the average.
 13. Identifies locations with the highest passenger traffic and orders them in descending order based on the total number of passengers.
    
