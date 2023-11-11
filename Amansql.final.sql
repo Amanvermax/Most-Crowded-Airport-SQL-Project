@@ -1,5 +1,5 @@
 
-/*  Find the country with the most passengers in the year 2018.  */
+/* 1 Find the country with the most passengers in the year 2018.  */
 
 
 WITH CountryPassengerTotals AS (
@@ -14,7 +14,7 @@ ORDER BY TotalPassengers DESC
 LIMIT 1;
 
 
-/* Find the top 5 airports with the highest gender diversity
+/* 2 Find the top 5 airports with the highest gender diversity
 (lowest ratio of male to female passengers) in the year 2017.*/
 
 
@@ -29,7 +29,7 @@ ORDER BY GenderDiversity ASC
 LIMIT 5;
 
 
-/* Calculate the percentage change in the number of passengers
+/* 3 Calculate the percentage change in the number of passengers
  for each airport from 2016 to 2022.*/
 
 
@@ -45,7 +45,7 @@ FROM PassengerChange
 
 
 
-/* Retrieve the airport with the highest number of passengers for each year.  */
+/* 4 Retrieve the airport with the highest number of passengers for each year.  */
 
 SELECT Year, Ranks, Airport,Country
 FROM airport a
@@ -56,7 +56,7 @@ WHERE (
 ) = 1;
 
 
-/* Find the top 5 airports
+/* 5 Find the top 5 airports
  with the highest percentage of passengers above 50 in 2020.*/
 
 WITH AgePercentage AS (
@@ -73,7 +73,7 @@ LIMIT 5;
 
 
 
-/*--Countries with the Most Passengers in 2018 Here I am finding the countries with the most passengers in 2018.    */
+/* 6-Countries with the Most Passengers in 2018 Here I am finding the countries with the most passengers in 2018.    */
 
 WITH CountryPassengerTotals AS (
   SELECT Country, SUM(Passengers) AS TotalPassengers
@@ -85,7 +85,7 @@ SELECT Country, TotalPassengers
 FROM CountryPassengerTotals
 ORDER BY TotalPassengers DESC;
 
-/* --To find out how many total passengers traveled in economy_class and business_class in 2020, we can use the following SQL query     */
+/* 7-To find out how many total passengers traveled in economy_class and business_class in 2020, we can use the following SQL query     */
 
 
 SELECT 
@@ -97,7 +97,7 @@ FROM airport;
 
 
 
-/* Finding the top 5 countries with the most airports.   */
+/* 8 Finding the top 5 countries with the most airports.   */
 
 
 SELECT Country, COUNT(Airport) AS AirportCount
@@ -111,7 +111,7 @@ LIMIT 5;
 
 
 
-/*--Query to categorize airports by country into regions:*/
+/* 9-Query to categorize airports by country into regions:*/
 
 
 
@@ -125,7 +125,7 @@ SELECT Year, Ranks, Airport, Location, Country,
   END AS Region
 FROM airport;
 
-/*Find pairs of airports in the same country by joining the "airport" table with itself (a1 and a2). Match rows where a1 and a2 have 
+/* 10 Find pairs of airports in the same country by joining the "airport" table with itself (a1 and a2). Match rows where a1 and a2 have 
 the same country and ensure that a1's airport is less than a2's airport to avoid duplicates or self-pairs.*/
  
        
@@ -137,7 +137,7 @@ WHERE a1.Airport < a2.Airport
   
   
   
-  /*This query identifies the year(s) with the highest number of business class passengers, matching the maximum count among all years in the provided data.
+  /* 11 This query identifies the year(s) with the highest number of business class passengers, matching the maximum count among all years in the provided data.
   */
 
 WITH CTE AS 
@@ -153,7 +153,7 @@ SELECT * FROM CTE
     WHERE Total_business_class IN 
     (SELECT MAX(Total_business_class) FROM CTE);
 
-/*
+/* 12
 This query lists airports with above-average male passengers, ranked by descending male passenger count,
  identifying airports with a higher concentration of male passengers than the average.
 
@@ -175,7 +175,7 @@ FROM CTE
 WHERE Total_male > (SELECT AVG(Total_male) FROM CTE)
 ORDER BY Total_male DESC;
 
-/*
+/* 13
 The query identifies locations with the highest passenger traffic and orders them in descending order based on the total number of passengers.*/
 
 WITH CTE AS 
