@@ -79,7 +79,7 @@ CD SQL-Project
 # Run the SQL queries against your database of choice.
 
 ##Usage
-You can use the insights and analysis findings from this project for various purposes, such as understanding Amazon's sales strategies, identifying top-performing products, and exploring customer sentiments.
+You can use the insights and analysis findings from this project for various purposes, such as making strategies, identifying top-performing airports, and exploring customer sentiments.
 
 
 ##Contributing
